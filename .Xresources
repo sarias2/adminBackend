@@ -1,0 +1,7 @@
+! Perl Extensions
+URxvt.perl-ext-common: default,clipboard
+! Copy-Paste Keys
+URxvt.iso14755: false
+URxvt.iso14755_52: false
+URxvt.keysym.Shift-Control-C: perl:clipboard:copy
+URxvt.keysym.Shift-Control-V: perl:clipboard:paste
