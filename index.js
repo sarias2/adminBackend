@@ -5,19 +5,19 @@ const { dbConnection } = require('./database/config')
 
 const app = express();
 
-app.use( cors() );
+app.use(cors());
+
+app.use(express.json());
 
 dbConnection();
 
 const port = process.env.PORT;
 
-app.get('/', (req, res) => {
-    res.json({
-        ok: true,
-        msg: 'Welcome to my backend'
-    })
-})
 
-app.listen (port, () => {
+//Routes
+app.use('/api/users', require('./routes/users.js'));
+app.use('/api/login', require('./routes/auth.js'));
+
+app.listen(port, () => {
     console.log('Server runnung on port ' + port);
 })
