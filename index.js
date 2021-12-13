@@ -15,8 +15,10 @@ const port = process.env.PORT;
 
 
 //Routes
-app.use('/api/users', require('./routes/users.js'));
-app.use('/api/login', require('./routes/auth.js'));
+app.use('/api/users', require('./routes/users'));
+app.use('/api/hospitals', require('./routes/hospitals'));
+app.use('/api/doctors', require('./routes/doctors'));
+app.use('/api/login', require('./routes/auth'));
 
 app.listen(port, () => {
     console.log('Server runnung on port ' + port);
