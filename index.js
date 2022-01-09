@@ -21,5 +21,5 @@ app.use('/api/doctors', require('./routes/doctors'));
 app.use('/api/login', require('./routes/auth'));
 
 app.listen(port, () => {
-    console.log('Server runnung on port ' + port);
+    console.log('Server running on port ' + port);
 })
